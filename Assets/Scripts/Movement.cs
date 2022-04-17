@@ -61,5 +61,6 @@ public class Movement : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(jumpForce*Vector3.up);
+        Debug.Log("Is this working?");
     }
 }
