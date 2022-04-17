@@ -8,6 +8,7 @@ public class Movement : MonoBehaviour
     public void OnMovementInput(InputAction.CallbackContext ctx)
     {
         Vector2 movementInput = ctx.ReadValue<Vector2>();
+        Debug.Log(movementInput);
     }
 
     public void OnJumpInput(InputAction.CallbackContext ctx)
@@ -17,6 +18,7 @@ public class Movement : MonoBehaviour
 
     private void Jump()
     {
-        throw new System.NotImplementedException();
+        // throw new System.NotImplementedException();
+        Debug.Log("Jump");
     }
 }
