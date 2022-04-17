@@ -1,13 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private float jumpForce;
+
+    private Rigidbody rb;
+    private Vector2 movementInput;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
+        MovePlayer();
+    }
+
+    private void MovePlayer()
+    {
+        rb.velocity = moveSpeed * (new Vector3(movementInput.x, rb.velocity.y, movementInput.y));
+    }
+    
     public void OnMovementInput(InputAction.CallbackContext ctx)
     {
-        Vector2 movementInput = ctx.ReadValue<Vector2>();
+        movementInput = ctx.ReadValue<Vector2>();
         Debug.Log(movementInput);
     }
 
@@ -18,7 +37,6 @@ public class Movement : MonoBehaviour
 
     private void Jump()
     {
-        // throw new System.NotImplementedException();
-        Debug.Log("Jump");
+        rb.AddForce(jumpForce*Vector3.up);
     }
 }
