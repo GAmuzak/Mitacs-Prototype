@@ -286,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 857285136}
+  waitTime: 0.2
 --- !u!4 &724127028
 Transform:
   m_ObjectHideFlags: 0
