@@ -50,7 +50,6 @@ public class Movement : MonoBehaviour
         Vector2 movementInput2d = ctx.ReadValue<Vector2>();
         movementInput2d=movementInput2d.normalized;
         movementInput = new Vector3(movementInput2d.x, 0, movementInput2d.y);
-        Debug.Log(movementInput);
     }
 
     public void OnJumpInput(InputAction.CallbackContext ctx)
@@ -61,6 +60,5 @@ public class Movement : MonoBehaviour
     private void Jump()
     {
         rb.AddForce(jumpForce*Vector3.up);
-        Debug.Log("Is this working?");
     }
 }
