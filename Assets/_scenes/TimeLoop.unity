@@ -285,8 +285,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e301c373ede414c939eb85afb3f229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 857285136}
-  waitTime: 0.2
+  playerTransform: {fileID: 857285143}
+  resolution: 1
 --- !u!4 &724127028
 Transform:
   m_ObjectHideFlags: 0
@@ -420,6 +420,11 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!4 &857285143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3853409883612665222, guid: 5d3140fbfe84040798449f41eba4c9d4, type: 3}
+  m_PrefabInstance: {fileID: 3853409882790131607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &916263426
 GameObject:
   m_ObjectHideFlags: 0
