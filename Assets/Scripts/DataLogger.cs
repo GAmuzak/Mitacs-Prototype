@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 
 public class DataLogger : MonoBehaviour
 {
+    [SerializeField] private string pathForLogFile;
     [SerializeField] private Transform playerTransform;
     [Range(0.1f,100)][Tooltip("Sampling rate per second")]
     [SerializeField] private float resolution;
@@ -24,7 +25,7 @@ public class DataLogger : MonoBehaviour
     {
         waitTime = 1.0f / resolution;
         data = new List<Array>();
-        fileName = Application.dataPath + "/test.csv";
+        fileName = Application.dataPath + pathForLogFile;
         tw = new StreamWriter(fileName, false);
         tw.WriteLine("Time, Pos.x, Pos.y, Pos.z, Rot.x, Rot.y, Rot.z");
         tw.Close();

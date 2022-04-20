@@ -285,8 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e301c373ede414c939eb85afb3f229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pathForLogFile: /../DataLogs/PlayerData.csv
   playerTransform: {fileID: 857285143}
-  resolution: 0.2
+  resolution: 10
 --- !u!4 &724127028
 Transform:
   m_ObjectHideFlags: 0
