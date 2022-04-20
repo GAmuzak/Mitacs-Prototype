@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 857285143}
-  resolution: 1
+  resolution: 0.2
 --- !u!4 &724127028
 Transform:
   m_ObjectHideFlags: 0
