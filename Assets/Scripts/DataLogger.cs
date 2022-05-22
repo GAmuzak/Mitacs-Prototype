@@ -20,7 +20,7 @@ public class DataLogger : MonoBehaviour
     private Vector3 playerLoc;
     private Vector3 playerRot;
     private List<Array> data;
-
+    private Camera mainCam;
     private void Start()
     {
         waitTime = 1.0f / resolution;
